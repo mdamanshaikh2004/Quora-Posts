@@ -29,6 +29,9 @@ let posts = [{
 app.listen(port, () => {
     console.log("listening to part : 8080");
 });
+app.get("/", (req, res) => {
+    res.send("Quora Posts API is running ");
+});
 app.get("/posts", (req, res) => {
     res.render("index.ejs", { posts });
 });
